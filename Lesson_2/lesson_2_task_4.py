@@ -9,6 +9,7 @@ def fizz_buzz(n):
         else:
             print(i)
 
+
 n = int(input())
 result = fizz_buzz(n)
 print(result)
