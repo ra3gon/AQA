@@ -5,3 +5,6 @@ class Address:
         self.street = street
         self.build = build
         self.apart = apart
+
+    def __str__(self):
+        return f"<{self.index}>, <{self.city}>, <{self.street}>, <{self.build}> - <{self.apart}>"
