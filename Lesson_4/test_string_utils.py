@@ -3,6 +3,7 @@ from string_utils import StringUtils
 
 su = StringUtils()
 
+
 @pytest.mark.parametrize('string, result', [
     ("hello", "Hello"),
     ("привет", "Привет"),
@@ -47,6 +48,7 @@ def test_trim(string, result):
 def test_to_list(string, delimeter, result):
     assert su.to_list(string, delimeter) == result
 
+
 @pytest.mark.parametrize('string, symbol, result', [
     ("Skypro", "y", True),
     ("Skypro", "v", False),
@@ -62,6 +64,7 @@ def test_to_list(string, delimeter, result):
 ])
 def test_contains(string, symbol, result):
     assert su.contains(string, symbol) == result
+
 
 @pytest.mark.parametrize('string, symbol, result', [
     ("SkyPro", "k", "SyPro"),
@@ -80,6 +83,7 @@ def test_contains(string, symbol, result):
 ])
 def test_delete_symbol(string, symbol, result):
     assert su.delete_symbol(string, symbol) == result
+
 
 @pytest.mark.parametrize('string, symbol, result', [
     ("SkyPro", "S", True),
@@ -101,6 +105,7 @@ def test_delete_symbol(string, symbol, result):
 def test_starts_with(string, symbol, result):
     assert su.starts_with(string, symbol) == result
 
+
 @pytest.mark.parametrize('string, symbol, result', [
      ("SkyPro", "o", True),
      ("SkyPro", "P", False),
@@ -121,6 +126,7 @@ def test_starts_with(string, symbol, result):
 def test_end_with(string, symbol, result):
     assert su.end_with(string, symbol) == result
 
+
 @pytest.mark.parametrize('string, resault', [
     ("", True),
     (" ", True),
@@ -133,6 +139,7 @@ def test_end_with(string, symbol, result):
 ])
 def test_is_empty(string, resault):
     assert su.is_empty(string) == resault
+
 
 @pytest.mark.parametrize('lst, joiner, result', [
     ([1, 2, 3, 4], ". ", "1. 2. 3. 4"),
