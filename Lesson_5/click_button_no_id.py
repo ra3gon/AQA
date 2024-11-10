@@ -12,7 +12,7 @@ def run_test(driver):
 
     sleep(1)
 
-    blue_button = driver.fine_element((By.CSS_SELECTOR, '.btn-primary'))
+    blue_button = driver.find_element((By.CSS_SELECTOR, '.btn-primary'))
     blue_button.click()
 
     sleep(3)
