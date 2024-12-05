@@ -1,3 +1,4 @@
+.aqaenv/
 __pycash__/
 .vscode/
 .pytest_cache/
